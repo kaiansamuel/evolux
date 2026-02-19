@@ -19,8 +19,8 @@ declare global {
 }
 
 const Index = () => {
-  const [coords, setCoords] = useState('0.52.0.24.00');
-  const [statusText, setStatusText] = useState('Status do sistema: Operacional');
+  const [coords, setCoords] = useState('0.00.0.00.00');
+  const [statusText, setStatusText] = useState('Operacional — pronto');
   const [statusActive, setStatusActive] = useState(true);
   const heroRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
@@ -197,10 +197,10 @@ const Index = () => {
 
   const handleCoreClick = useCallback(() => {
     setStatusActive(false);
-    setStatusText('Status: Reindexando');
+    setStatusText('Status: Reiniciando');
     setTimeout(() => {
       setStatusActive(true);
-      setStatusText('System Status: Operational');
+      setStatusText('Operacional — pronto');
     }, 4000);
   }, []);
 
@@ -230,12 +230,12 @@ const Index = () => {
               </span>
             </div>
             <nav className="hidden md:flex items-center gap-1 glass-panel p-1 rounded-full">
-              <a className="px-5 py-2 rounded-full hover:bg-white/5 text-zinc-400 hover:text-white transition-colors text-xs font-medium uppercase tracking-wider" href="#">Loja</a>
-              <a className="px-5 py-2 rounded-full hover:bg-white/5 text-zinc-400 hover:text-white transition-colors text-xs font-medium uppercase tracking-wider" href="#">Integrações</a>
-              <a className="px-5 py-2 rounded-full hover:bg-white/5 text-zinc-400 hover:text-white transition-colors text-xs font-medium uppercase tracking-wider" href="#">Memória</a>
+              <a className="px-5 py-2 rounded-full hover:bg-white/5 text-zinc-400 hover:text-white transition-colors text-xs font-medium uppercase tracking-wider" href="#">Sites</a>
+              <a className="px-5 py-2 rounded-full hover:bg-white/5 text-zinc-400 hover:text-white transition-colors text-xs font-medium uppercase tracking-wider" href="#">Sistemas</a>
+              <a className="px-5 py-2 rounded-full hover:bg-white/5 text-zinc-400 hover:text-white transition-colors text-xs font-medium uppercase tracking-wider" href="#">Automação</a>
             </nav>
             <button className="group flex items-center gap-2 px-4 py-2 border border-white/10 rounded-full bg-black/20 backdrop-blur-sm hover:border-lime-400/30 hover:bg-lime-400/10 transition-all duration-300">
-              <span className="text-xs font-medium text-white group-hover:text-lime-300">Abrir Painel</span>
+              <span className="text-xs font-medium text-white group-hover:text-lime-300">Agendar Demo</span>
               <iconify-icon icon="solar:arrow-right-linear" width="16" className="text-lime-400 group-hover:translate-x-0.5 transition-transform" />
             </button>
           </header>
@@ -254,19 +254,19 @@ const Index = () => {
               <div className="space-y-0">
                 <div className="overflow-hidden">
                   <h1 className="hero-reveal text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight leading-[0.95] text-white glitch-target mix-blend-difference">
-                    Evolux Core,
+                    Sites que convertem, sistemas sob medida,
                   </h1>
                 </div>
                 <div className="overflow-hidden">
                   <h1 className="hero-reveal text-5xl md:text-7xl lg:text-8xl font-serif italic font-light tracking-tight leading-[0.95] text-lime-300/90 glitch-target">
-                    Simplificado.
+                    Design premium. Automação prática.
                   </h1>
                 </div>
               </div>
               <div className="overflow-hidden max-w-xl">
                 <p className="hero-reveal text-sm md:text-lg text-zinc-400 leading-relaxed font-light">
-                  Pare de lutar com configurações brutas. A Evolux oferece interface visual, memória avançada, skills plug-and-play e uma GUI unificada.
-                  <span className="text-lime-400/70 text-xs block mt-2 font-mono uppercase tracking-widest opacity-80">&gt; Clique no núcleo para iniciar a sequência</span>
+                  Pare de perder leads por sites lentos ou confusos. Entregamos sites de alta conversão, sistemas sob medida e automações com IA para otimizar vendas e operações.
+                  <span className="text-lime-400/70 text-xs block mt-2 font-mono uppercase tracking-widest opacity-80">&gt; Clique no núcleo para iniciar um diagnóstico rápido</span>
                 </p>
               </div>
               <div className="overflow-hidden pt-6">
@@ -275,13 +275,13 @@ const Index = () => {
                     <button aria-label="Install ClawOS" className="btn" type="button">
                       <div className="txt-wrapper">
                         <div className="txt-1">
-                          {'Instalar'.split('').map((l, i) => (
+                          {'Quero'.split('').map((l, i) => (
                             <span key={i} className="btn-letter">{l}</span>
                           ))}
                           <span className="btn-letter" style={{ width: 4 }}></span>
-                          {'Evolux'.split('').map((l, i) => (
-                            <span key={i + 7} className="btn-letter">{l}</span>
-                          ))}
+                                {'Evolux'.split('').map((l, i) => (
+                                  <span key={i + 7} className="btn-letter">{l}</span>
+                                ))}
                         </div>
                       </div>
                       <svg className="btn-svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -295,7 +295,7 @@ const Index = () => {
                     <span className="animate-[spin_4s_linear_infinite] transition-opacity duration-300 group-hover:opacity-100 opacity-0 absolute top-[-150%] left-[-150%] w-[400%] h-[400%] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,#a3e635_100%)]" />
                     <span className="absolute inset-0 rounded-full bg-white/10 transition-opacity duration-300 group-hover:opacity-0" />
                     <span className="flex items-center justify-center gap-2 transition-colors duration-300 group-hover:text-lime-300 text-sm font-medium text-white tracking-tight bg-zinc-950 w-full h-full rounded-full pr-8 pl-8 relative shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
-                      <span className="relative z-10">Ver Documentação</span>
+                      <span className="relative z-10">Ver Portfólio</span>
                       <svg className="relative z-10 text-zinc-400 group-hover:text-lime-300 transition-colors" fill="none" height="18" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
                         <polyline points="14 2 14 8 20 8" />
@@ -313,7 +313,7 @@ const Index = () => {
           {/* Bottom Stats */}
           <footer className="pointer-events-auto nav-item flex justify-between items-end w-full px-6 pb-8 opacity-0">
             <div className="flex flex-col gap-1">
-              <span className="text-[10px] uppercase tracking-widest text-zinc-600 font-bold">Coordenadas Vetoriais</span>
+              <span className="text-[10px] uppercase tracking-widest text-zinc-600 font-bold">Coordenadas</span>
               <span className="text-xs font-mono text-lime-400">{coords}</span>
             </div>
             <div className="hidden md:flex gap-4">
@@ -331,10 +331,10 @@ const Index = () => {
       <section className="radar-section py-32 relative overflow-hidden bg-black">
         <div className="max-w-7xl mx-auto px-6 text-center mb-16 relative z-10">
           <h2 className="radar-heading text-3xl md:text-5xl font-medium text-white tracking-tight mb-6">
-            O Upgrade <span className="font-serif italic text-lime-300">do Núcleo</span>
+            A camada que acelera <span className="font-serif italic text-lime-300">resultados</span>
           </h2>
           <p className="radar-desc text-lg text-zinc-400 max-w-xl mx-auto">
-            Transformamos a complexidade do Evolux Core em uma plataforma elegante. Gerencie agentes, mantenha contexto e amplie capacidades sem escrever código.
+            Unimos site, sistema e IA numa plataforma única para decisões mais rápidas, automações acionáveis e melhores taxas de conversão.
           </p>
         </div>
 
@@ -352,7 +352,7 @@ const Index = () => {
             <svg className="text-lime-400 mb-1" fill="none" height="32" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="32">
               <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
             </svg>
-            <span className="text-xs font-medium text-white tracking-tight">Evolux Core</span>
+            <span className="text-xs font-medium text-white tracking-tight">Núcleo Evolux</span>
           </div>
 
           {/* Orbiting Nodes */}
@@ -362,7 +362,7 @@ const Index = () => {
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
               </svg>
             </div>
-            <span className="text-xs text-zinc-500 group-hover:text-white transition-colors">Mensagens Unificadas</span>
+            <span className="text-xs text-zinc-500 group-hover:text-white transition-colors">Atendimento Unificado</span>
           </div>
 
           <div className="radar-node absolute bottom-[20%] right-[20%] flex flex-col items-center gap-2 group cursor-pointer hover:scale-105 transition-transform duration-300">
@@ -373,7 +373,7 @@ const Index = () => {
                 <path d="M3 12A9 3 0 0 0 21 12" />
               </svg>
             </div>
-            <span className="text-xs text-zinc-500 group-hover:text-white transition-colors">Memória Avançada</span>
+            <span className="text-xs text-zinc-500 group-hover:text-white transition-colors">Memória Contextual</span>
           </div>
 
           <div className="radar-node absolute top-[20%] right-[25%] flex flex-col items-center gap-2 group cursor-pointer hover:scale-105 transition-transform duration-300">
@@ -384,7 +384,7 @@ const Index = () => {
                 <line x1="12" x2="12" y1="22.08" y2="12" />
               </svg>
             </div>
-            <span className="text-xs text-zinc-500 group-hover:text-white transition-colors">Injeção de Skills</span>
+            <span className="text-xs text-zinc-500 group-hover:text-white transition-colors">Skills Plug-and-Play</span>
           </div>
 
           <div className="radar-node absolute bottom-[15%] left-[25%] flex flex-col items-center gap-2 group cursor-pointer hover:scale-105 transition-transform duration-300">
@@ -394,7 +394,7 @@ const Index = () => {
                 <circle cx="17" cy="4" r="2" /><circle cx="19" cy="12" r="2" /><circle cx="10" cy="20" r="2" />
               </svg>
             </div>
-            <span className="text-xs text-zinc-500 group-hover:text-white transition-colors">Configuração Fácil</span>
+            <span className="text-xs text-zinc-500 group-hover:text-white transition-colors">Configuração Visual</span>
           </div>
         </div>
       </section>
@@ -403,11 +403,11 @@ const Index = () => {
       <section className="cap-section py-24 bg-zinc-950 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-end mb-16">
-            <h2 className="cap-heading text-4xl md:text-6xl font-medium text-white tracking-tight">
-              Além da <br /> <span className="font-serif italic font-light text-zinc-500">Automação</span>
+              <h2 className="cap-heading text-4xl md:text-6xl font-medium text-white tracking-tight">
+              Automação com <br /> <span className="font-serif italic font-light text-zinc-500">foco em resultado</span>
             </h2>
             <button className="cap-btn hidden md:block border border-white/20 text-white px-6 py-2 rounded-full text-sm hover:bg-white/10 transition-colors">
-              Explorar Biblioteca de Skills
+              Explorar Skills
             </button>
           </div>
           <div className="cap-cards grid md:grid-cols-2 gap-6">
@@ -416,10 +416,10 @@ const Index = () => {
               <div className="absolute bottom-0 left-0 p-8 w-full z-10">
                 <div className="flex items-center gap-2 mb-2 text-lime-400">
                   <iconify-icon icon="solar:brain-bold-duotone" />
-                  <span className="text-xs uppercase tracking-wider font-bold">Banco Vetorial</span>
+                  <span className="text-xs uppercase tracking-wider font-bold">Dados e Contexto</span>
                 </div>
-                <h3 className="text-3xl text-white font-medium mb-1">Memória Avançada</h3>
-                <p className="text-zinc-400 text-sm">A Evolux indexa automaticamente cada conversa. Seus agentes não perdem contexto, usuário ou preferência.</p>
+                <h3 className="text-3xl text-white font-medium mb-1">Memória Contextual</h3>
+                <p className="text-zinc-400 text-sm">Indexamos conversas e dados para personalização e automações que mantêm contexto e convertem mais.</p>
               </div>
             </div>
             <div className="cap-card group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer bg-zinc-900 border border-white/5 hover:border-lime-400/30 transition-colors duration-500">
@@ -427,10 +427,10 @@ const Index = () => {
               <div className="absolute bottom-0 left-0 p-8 w-full z-10">
                 <div className="flex items-center gap-2 mb-2 text-lime-400">
                   <iconify-icon icon="solar:chat-round-bold-duotone" />
-                  <span className="text-xs uppercase tracking-wider font-bold">Inbox Unificado</span>
+                  <span className="text-xs uppercase tracking-wider font-bold">Central de Contato</span>
                 </div>
-                <h3 className="text-3xl text-white font-medium mb-1">Painel de Mensagens</h3>
-                <p className="text-zinc-400 text-sm">Controle bots do Telegram, Discord e Slack a partir de um único painel elegante. Sem editar JSON.</p>
+                <h3 className="text-3xl text-white font-medium mb-1">Painel Unificado</h3>
+                <p className="text-zinc-400 text-sm">Gerencie canais e bots num único painel elegante — sem editar código.</p>
               </div>
             </div>
           </div>
@@ -440,13 +440,12 @@ const Index = () => {
       {/* ======== NARRATIVE QUOTE ======== */}
       <section className="quote-section text-center bg-black pt-32 pr-6 pb-32 pl-6">
         <p className="quote-text text-3xl md:text-5xl font-medium text-white max-w-4xl mx-auto leading-tight tracking-tight">
-          "O Evolux Core é o motor.<br />
-          <span className="font-serif italic text-zinc-500">Evolux é o volante.</span>"
+          "Sites que vendem. Sistemas que organizam operações." 
         </p>
-        <p className="quote-sub mt-4 text-lg text-zinc-500">Forneça aos seus agentes ferramentas, memória e uma interface de usuário.</p>
+        <p className="quote-sub mt-4 text-lg text-zinc-500">Dê à sua equipe IA útil, automações e painéis que geram resultados reais.</p>
         <div className="quote-btn mt-12 flex justify-center">
             <button className="border border-white/20 text-white px-6 py-2 rounded-full text-sm hover:bg-white/10 transition-colors">
-            Ver Arquitetura
+            Ver Soluções
           </button>
         </div>
       </section>
@@ -454,7 +453,7 @@ const Index = () => {
       {/* ======== PLATFORM LOGOS ======== */}
       <section className="logos-section border-y border-white/5 pt-20 pb-20">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="logos-title text-center text-zinc-600 text-sm font-medium mb-12 uppercase tracking-widest">Gerencia bots sem esforço em</p>
+          <p className="logos-title text-center text-zinc-600 text-sm font-medium mb-12 uppercase tracking-widest">Integra com plataformas</p>
           <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             <iconify-icon icon="simple-icons:telegram" width="40" className="logo-icon text-white hover:text-[#26A5E4]" />
             <iconify-icon icon="simple-icons:discord" width="40" className="logo-icon text-white hover:text-[#5865F2]" />
@@ -468,13 +467,13 @@ const Index = () => {
       {/* ======== FEATURES LIST ======== */}
       <section className="features-section py-32 bg-black">
         <div className="features-container max-w-5xl mx-auto px-6 bg-zinc-900/50 rounded-3xl p-10 md:p-20 border border-white/10">
-          <h3 className="features-title text-center text-3xl font-medium text-white mb-16">Como <span className="font-serif italic text-zinc-400">simplificamos</span> tudo.</h3>
+          <h3 className="features-title text-center text-3xl font-medium text-white mb-16">Como <span className="font-serif italic text-zinc-400">entregamos</span> mais conversão e escala.</h3>
           <div className="features-list space-y-0 divide-y divide-white/10">
             {[
-              { num: '01', title: 'Adicione skills instantaneamente', desc: 'Navegue pela nossa marketplace e adicione capacidades como "Busca Google" ou "Análise de PDF" ao Evolux Core com um clique.' },
-              { num: '02', title: 'Janela de Contexto Infinita', desc: 'Cuidamos dos embeddings vetoriais. Sua instância do Evolux Core ganha memória de longo prazo pronta para uso.' },
-              { num: '03', title: 'Configuração Visual', desc: 'Chega de CLI. Gerencie chaves, limites e prompts pelo nosso painel intuitivo.' },
-              { num: '04', title: 'Roteamento Multi-App', desc: 'Conecte um cérebro Evolux Core a múltiplas plataformas de mensagens ao mesmo tempo via Evolux.' },
+              { num: '01', title: 'Sites Otimizados', desc: 'Design, copy e performance integrados para aumentar conversões desde o primeiro acesso.' },
+              { num: '02', title: 'Memória Contextual', desc: 'Dados persistentes e contexto que permitem automações relevantes e atendimento personalizado.' },
+              { num: '03', title: 'Configuração Visual', desc: 'Crie fluxos, integrações e regras pelo painel — sem depender de engenharia para cada mudança.' },
+              { num: '04', title: 'Integrações Centralizadas', desc: 'Conecte canais, CRMs e ERPs numa visão única — dados sincronizados, operação escalável.' },
             ].map((item) => (
               <div key={item.num} className="feature-row group py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer">
                 <div className="flex items-start gap-4">
@@ -491,20 +490,20 @@ const Index = () => {
       {/* ======== TESTIMONIAL ======== */}
       <section className="testi-section py-32 bg-black relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h4 className="testi-label text-sm font-medium text-zinc-500 mb-8 uppercase tracking-widest">Feedback da Comunidade.</h4>
+          <h4 className="testi-label text-sm font-medium text-zinc-500 mb-8 uppercase tracking-widest">Depoimentos</h4>
           <div className="testi-badge mb-10">
-            <p className="text-xs font-bold text-white tracking-wider">EQUIPE DEV</p>
+            <p className="text-xs font-bold text-white tracking-wider">CLIENTE</p>
           </div>
           <blockquote className="testi-quote text-2xl md:text-3xl text-zinc-300 font-serif italic leading-relaxed mb-12">
-            "O Evolux Core é poderoso, mas difícil de gerenciar em escala. A Evolux mudou isso. Só o recurso de memória nos poupou semanas de engenharia, e o painel tornou a depuração de bots até prazerosa."
+            "A Evolux aumentou nossa taxa de conversão e simplificou fluxos operacionais. Entregas rápidas e suporte dedicado."
           </blockquote>
           <div className="testi-author flex flex-col items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-zinc-800 border border-white/20 flex items-center justify-center">
               <span className="text-white text-xs font-medium">EK</span>
             </div>
-            <div className="text-center">
+              <div className="text-center">
               <div className="text-white text-sm font-medium">Elena K.</div>
-              <div className="text-zinc-600 text-xs">AI Engineer</div>
+              <div className="text-zinc-600 text-xs">Engenheira de IA</div>
             </div>
           </div>
         </div>
@@ -519,11 +518,10 @@ const Index = () => {
               <iconify-icon icon="solar:programming-linear" className="text-black text-5xl mb-6 animate-pulse" />
             </div>
             <h2 className="cta-heading text-4xl md:text-6xl font-medium text-black mb-6 tracking-tight">
-              Eleve sua experiência com o Evolux <br />
-              hoje <span className="font-serif italic">agora.</span>
+              Comece a transformar site, sistema e operação hoje.
             </h2>
             <button className="cta-btn bg-transparent border border-black text-black px-8 py-3 rounded-full text-sm font-medium hover:bg-black hover:text-lime-300 transition-all">
-              Teste Grátis
+              Quero Diagnóstico
             </button>
           </div>
         </div>
@@ -540,36 +538,36 @@ const Index = () => {
               <div className="flex items-center gap-2 mb-6">
                 <span className="text-white font-medium tracking-tighter">Evolux</span>
               </div>
-              <h3 className="text-2xl text-white font-medium mb-4">A camada que faltava para <br /> agentes autônomos.</h3>
+              <h3 className="text-2xl text-white font-medium mb-4">Sites, sistemas e IA que entregam resultado.</h3>
               <div className="flex gap-2">
-                <input className="bg-white/5 border border-white/10 rounded-md px-4 py-2 text-sm text-white w-full focus:outline-none focus:border-lime-400" placeholder="E-mail" type="email" />
+                <input className="bg-white/5 border border-white/10 rounded-md px-4 py-2 text-sm text-white w-full focus:outline-none focus:border-lime-400" placeholder="Seu e-mail" type="email" />
                 <button className="bg-white/10 border border-white/10 rounded-md px-3 text-white hover:bg-white/20">
                   <iconify-icon icon="solar:arrow-right-linear" />
                 </button>
               </div>
             </div>
             <div className="footer-col md:col-start-3">
-              <h4 className="text-white font-medium mb-4 text-sm">Product</h4>
+              <h4 className="text-white font-medium mb-4 text-sm">Produto</h4>
               <ul className="space-y-2 text-sm text-zinc-500">
-                <li><a className="hover:text-lime-400 transition-colors" href="#">Skills Store</a></li>
-                <li><a className="hover:text-lime-400 transition-colors" href="#">Memory DB</a></li>
-                <li><a className="hover:text-lime-400 transition-colors" href="#">Messaging GUI</a></li>
+                <li><a className="hover:text-lime-400 transition-colors" href="#">Sites</a></li>
+                <li><a className="hover:text-lime-400 transition-colors" href="#">Sistemas</a></li>
+                <li><a className="hover:text-lime-400 transition-colors" href="#">IA &amp; Automação</a></li>
               </ul>
             </div>
             <div className="footer-col">
-              <h4 className="text-white font-medium mb-4 text-sm">Resources</h4>
+              <h4 className="text-white font-medium mb-4 text-sm">Recursos</h4>
               <ul className="space-y-2 text-sm text-zinc-500">
-                <li><a className="hover:text-lime-400 transition-colors" href="#">OpenClaw Docs</a></li>
-                <li><a className="hover:text-lime-400 transition-colors" href="#">Integration Guide</a></li>
+                <li><a className="hover:text-lime-400 transition-colors" href="#">Docs Evolux</a></li>
+                <li><a className="hover:text-lime-400 transition-colors" href="#">Guia de Integração</a></li>
                 <li><a className="hover:text-lime-400 transition-colors" href="#">GitHub</a></li>
               </ul>
             </div>
           </div>
           <div className="footer-bottom flex justify-between items-center pt-8 text-xs text-zinc-600">
-            <p>© 2024 ClawOS. Not affiliated with OpenClaw Core.</p>
+            <p>© 2026 Evolux. Todos os direitos reservados.</p>
             <div className="flex gap-4">
-              <a className="hover:text-white" href="#">Privacy</a>
-              <a className="hover:text-white" href="#">Terms</a>
+              <a className="hover:text-white" href="#">Privacidade</a>
+              <a className="hover:text-white" href="#">Termos</a>
             </div>
           </div>
         </div>
